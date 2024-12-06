@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .calendar-card {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .card-header h2 {
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .card-header button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .card-header button:hover {
+    background-color: #0056b3;
+  }
+  
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .day {
+    font-weight: bold;
+    text-align: center;
+    color: #555;
+  }
+  
+  .date {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .date:hover {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  .date.inactive {
+    color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .calendar-card {
+      padding: 10px;
+    }
+  
+    .card-header h2 {
+      font-size: 1.2em;
+    }
+  
+    .date {
+      padding: 8px;
+      font-size: 0.9em;
+    }
+  }
+  
